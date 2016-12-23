@@ -1,0 +1,102 @@
+@import "library"; 
+
+.float_box {
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: column;
+	-webkit-flex-direction: column;
+	width: 34px;
+	height: auto;
+	position: fixed;
+	left: 50%;
+	margin-left: 510px;
+	bottom: 50px;
+	z-index: 2000;
+	&>div:nth-child(odd) {
+		width: 34px;
+		height: 34px;
+	}
+	&>div:nth-child(even) {
+		width: 34px;
+		height: 35px;
+	}
+	/***********置顶************/
+	&>div:nth-child(1) {
+		background: url(../imgs/gotop.jpg)  no-repeat top center / 34px 103px;
+		width: 34px;
+		height: 34px;
+		display: none;
+		&:hover {
+			background: url(../imgs/gotop2.jpg) no-repeat top center / 34px 103px;
+		}
+	}
+	/***********下载app************/
+	&>div:nth-child(2) {
+			border-bottom: 1px solid @var232;
+			.jk-app {
+				display: block;
+				width: 100%;
+				height: 100%;
+				position: relative;
+				background: @var23 url(../imgs/phone-1.png)  no-repeat  center center / 12px 24px;
+				.appewm {
+					display: block;
+					width: 126px;
+					height: 159px;
+					background: url(../imgs/appewm.png)  no-repeat center center;
+					background-size: 100%;
+					position: absolute;
+					z-index: 2100;
+					left: -126px;
+					top: -70px;
+					display: none;
+				}
+				&:hover {
+					background: @var23 url(../imgs/phone-2.png) no-repeat center center / 12px 24px;
+					.appewm {
+						display: block;
+					}
+				}
+			}
+		}
+		&>div:nth-child(4) {
+			border-top: 1px solid @var232;
+			a {
+				display: block;
+				width: 100%;
+				height: 100%;
+				position: relative;
+				background: @var23 url(../imgs/kfu1.png)  no-repeat center center;
+				span {
+					width: 180px;
+					height: 42px;
+					padding: 5px;
+					text-align: center;
+					display: block;
+					position: absolute;
+					left: -180px;
+					top: 0;
+					background: @var23;
+					color: @var5;
+					font-size: 12px;
+					display: none;
+				}
+			}
+			&:hover span {
+				display: block;
+			}
+		}
+}
+
+.kefu i {
+	heihgt: 20px;
+	width: 0;
+	height: 0;
+	border-top: 8px solid transparent;
+	border-left: 10px solid @var23;
+	border-bottom: 8px solid transparent;
+	position: absolute;
+	right: -10px;
+	top: 12px;
+}
+

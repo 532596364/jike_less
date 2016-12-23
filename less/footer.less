@@ -1,0 +1,163 @@
+@import "library"; 
+.footer div, .footer p, .footer dd, .footer dl, .footer dt {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	font-family: Verdana, "Lantinghei SC", "Hiragino Sans GB", "Microsoft Yahei", Helvetica, arial, ;
+}
+.footer {
+	margin-top: 50px;
+	height: 261px;
+	min-width: 1000px;
+	border-top: 1px solid @var14;
+	background: @var1;
+	.jkinfor-block .jkinfor {
+		width: 1000px;
+		margin: 0 auto;
+		height: 215px;
+		border-bottom: 1px solid @var20;
+		position: relative;
+		padding-left: 224px;
+		padding-top: 25px;
+		box-sizing: border-box;
+		// 页脚logo
+	   	.jk-logo{
+			position: absolute;
+			width: 160px;
+			height: auto;
+			display: inline-block;
+			top: 25px;
+			left: 0;
+			img{
+			width: 109px;
+		    height: 40px;
+		    display: block;
+			}
+			p{
+				font-size: 12px;
+			    color: @var25;
+			    margin-top: 20px;
+			}
+		}
+	  
+		//页脚信息
+		dl{
+			display: inline-block;
+			float: left;
+			width: 135px;
+		    color: @var19;
+		    dt{
+				font-size: 14px;
+			    line-height: 30px; 
+			    height: 30px;
+			}
+			dd{
+				font-size: 12px;
+			    line-height: 30px; 
+			    height: 30px;
+			    a{
+					color: @var25;
+				}
+				&:hover a{
+					color: @var11;
+				}
+			}
+		}
+
+
+		//联系方式
+		.jk-down{
+		    position: absolute;
+		    right: 0;
+		    top: 25px;
+		    display: inline-block;
+		    width: 175px;
+		    text-align: left;
+		    .hot-tel{
+				color: @var19;
+			    font-size: 14px;
+			    margin-bottom: 20px;
+			}
+			.downCon{
+				position: relative;
+			    display: block;
+			    width: 140px;
+			    height: 30px;
+			    box-sizing: border-box;
+			    border: 1px solid @var4;
+			    margin-bottom: 10px;
+			    line-height: 30px;
+			    color: @var19;
+			    font-size: 13px;
+			    padding-left: 60px;
+			    cursor: pointer;
+			    img {
+				    width: 115px;
+				    height: 153px;
+				    position: absolute;
+				    top: -154px;
+				    left: 12px;
+				    z-index: 2;
+				    display: none;
+				    opacity: 0;
+				}
+			}
+			.down-ios {
+			    background: url(../imgs/icon-down-ios.png)no-repeat 0 0;
+			    background-size: 30px 30px;
+			}
+			.down-and {
+			    background: url(../imgs/icon-down-and.png)no-repeat 0 0;
+			    background-size: 30px 30px;
+			}
+			.down-ios,.down-and{
+				&:hover {
+					img{
+						display: block;
+						opacity: 1;
+						animation: listshow 0.8s ease normal;
+						-moz-animation: listshow 0.8s ease normal;
+						-webkit-animation: listshow 0.8s ease normal;
+					}
+				}
+			}
+		}
+	}
+	/****版权*****/
+	.copyright {
+			width: 1000px;
+			margin: 0 auto;
+			text-align: center;
+			padding: 15px 0;
+			font-size: 12px;
+			color: @var25;
+			clear: both;
+			strong {
+				font-weight: 400;
+			}
+			a {
+				color: @var25;
+				&:hover {
+					color: @var11;
+				}
+				&.down-wechat {
+					display: block;
+					float: right;
+					width: 18px;
+					height: 15px;
+					background: url(../imgs/icon-down-wechat.png) no-repeat 0 0;
+					background-size: 18px 15px;
+				}
+				&.down-sina {
+					background: url(../imgs/icon-down-sina.png) no-repeat 0 0;
+					background-size: 20px 15px;
+					display: block;
+					float: right;
+					width: 20px;
+					height: 15px;
+					margin-right: 10px;
+				}
+			}
+		}
+}
+
